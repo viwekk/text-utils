@@ -2,10 +2,10 @@ import "./App.css";
 import Alert from "./Components/Alert";
 import Navbar from "./Components/Navbar";
 import TextForm from "./Components/TextForm";
-import About from "./Components/About";
+// import About from "./Components/About";
 
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import { Router, Routes } from "react-router-dom";
 
 
@@ -59,25 +59,35 @@ function App() {
     }
   }
   return (
-    <>
-      <Router>
-        <Navbar title="Text Utils" aboutText="About Us" mode={mode} toggleMode={toggleMode} redMode={handleRedMode}/>
-        {/* <Navbar /> */}
-        <Alert alert={alert}/>
-        <div className="container my-3">
-        <Routes>
+    // <>
+      // <Router>
+        // <Navbar title="Text Utils" aboutText="About Us" mode={mode} toggleMode={toggleMode} redMode={handleRedMode}/>
+        // {/* <Navbar /> */}
+        // <Alert alert={alert}/>
+        // <div className="container my-3">
+        // <Routes>
 
-            {/* exact keyword:  users --> comonent1,  when we want to access component2 and we have not use exact keyword before path the it show result of component1
-                                users/home --> comonent2 */}
+            // {/* exact keyword:  users --> comonent1,  when we want to access component2 and we have not use exact keyword before path the it show result of component1
+                                // users/home --> comonent2 */}
           
-            <Route exact path="/about" element={<About/>}/>
-            <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Get your text in Capital letter" mode={mode} />}/>
-        </Routes>
-        {/* <TextForm showAlert={showAlert} heading="Get your text in Capital letter" mode={mode} /> */}
+            // <Route exact path="/about" element={<About/>}/>
+            // <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Get your text in Capital letter" mode={mode} />}/>
+        // </Routes>
+        // {/* <TextForm showAlert={showAlert} heading="Get your text in Capital letter" mode={mode} /> */}
+        // {/* <About/> */}
+        // </div>
+      // </Router>
+    // </>
+    <>
+      {/* <Navbar title="Text Utils" aboutText="About Us" mode={mode} toggleMode={toggleMode} redMode={handleRedMode}/> */}
+      <Navbar title="Text Utils" mode={mode} toggleMode={toggleMode} redMode={handleRedMode}/>
+      {/* <Navbar /> */}
+      <Alert alert={alert}/>
+      <div className="container my-3">        
+        <TextForm showAlert={showAlert} heading="Get your text in Capital letter" mode={mode} />
         {/* <About/> */}
-        </div>
-      </Router>
-    </>
+      </div>
+  </>
   );
 }
 
